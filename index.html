@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D REFRESHER ALIMENTATION</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div id="home" class="center">
+
+            <img src="owner.jpg" alt="Owner" class="background-image">
+
+            <div class="overlay">
+
+                <h1>OUR CUSTOMER IS OUR PRIORITY</h1>
+
+                <button onclick="showLogin('admin')">Login as Admin</button>
+
+                <button onclick="showLogin('worker')">Login as Worker</button>
+
+                <button onclick="showRegister()">Register</button>
+
+            </div>
+
+        </div>
+
+        <div id="login" class="center hidden">
+
+            <h2 id="login-title"></h2>
+
+            <form id="login-form">
+
+                <input type="text" id="username" placeholder="Username" required>
+
+                <input type="password" id="pin" placeholder="Pin" required>
+
+                <button type="submit">Login</button>
+
+                <button type="button" onclick="showForgotPin()">Forgot Pin?</button>
+
+            </form>
+
+            <button class="back-button" onclick="goBack()">🔙</button>
+
+        </div>
+
+        <div id="register" class="center hidden">
+
+            <h2>Register</h2>
+
+            <form id="register-form">
+
+                <input type="text" id="full-name" placeholder="Full Names" required>
+
+                <input type="text" id="nationality" placeholder="Nationality" required>
+
+                <input type="text" id="national-id" placeholder="Rwandan National ID Number" required>
+
+                <input type="text" id="phone-number" placeholder="Rwandan Phone Number" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <button type="submit">Register</button>
+
+            </form>
+
+            <button class="back-button" onclick="goBack()">🔙</button>
+
+        </div>
+
+        <div id="forgot-pin" class="center hidden">
+
+            <h2>Forgot Pin</h2>
+
+            <form id="forgot-pin-form">
+
+                <input type="text" id="forgot-username" placeholder="Username" required>
+
+                <button type="submit">Send Pin</button>
+
+            </form>
+
+            <button class="back-button" onclick="goBack()">🔙</button>
+
+        </div>
+
+        <div id="admin-dashboard" class="center hidden">
+
+            <h2>Admin Dashboard</h2>
+
+            <button onclick="showAdminSection('manage-workers')">Manage Workers</button>
+
+            <button onclick="showAdminSection('sales-details')">Sales Details</button>
+
+            <button onclick="showAdminSection('stock-control')">Stock Control</button>
+
+            <button onclick="showAdminSection('cash-flow')">Cash Flow</button>
+
+            <button onclick="showAdminSection('notifications')">Notifications</button>
+
+            <button class="back-button" onclick="goBack()">🔙</button>
+
+        </div>
+
+        <div id="worker-dashboard" class="center hidden">
+
+            <h2>Worker Dashboard</h2>
+
+            <button onclick="showWorkerSection('stock-control')">Stock Control</button>
+
+            <button onclick="showWorkerSection('sales')">Sales</button>
+
+            <button class="back-button" onclick="goBack()">🔙</button>
+
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
